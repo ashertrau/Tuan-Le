@@ -21,18 +21,20 @@ public class LongestSameString {
 	
 	
 	public static String prefix(String[] str) {
-		if (str.length == 0) {
-			return "";
+		if (str.length == 0) { // 1 step
+			return ""; // 1 step
 		}
 		
-		String prefix = str[0];
+		String prefix = str[0]; // 1 step
 		
 		for (int i = 0; i < str.length; i++) {
-			while (str[i].indexOf(prefix) != 0) {
-				prefix = prefix.substring(0, prefix.length() - 1);
+			while (str[i].indexOf(prefix) != 0) { // n step
+				prefix = prefix.substring(0, prefix.length() - 1); // 1 step
 			}
 		}
 		
-		return prefix;
+		return prefix; // 1 step
+		
+		// 0(n + 5) -> 0(n) - Linear Time
 	}
 }

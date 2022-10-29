@@ -50,5 +50,7 @@ public class Sort {
 			}
 		}
 		return arr;
+		
+		// -> O(1) - Constant time
 	}
 }

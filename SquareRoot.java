@@ -19,10 +19,15 @@ public class SquareRoot {
 	
 	public static double squareRoot( double n, double x) {
 		
-		for (double i = 1; i < n; i++) {
+		for (double i = 1; i < n; i++) { // n step
 			x = ( x + n / x ) / 2;
+			
+			// same
+			// x += n / x;
+			// x /= 2;
 		}
 		
-		return x;
+		return x; // 1 step
+		// O(n + 1) -> O(n) - Linear Time
 	}
 }

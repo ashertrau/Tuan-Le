@@ -19,14 +19,14 @@ public class Sort {
 	
 	public static int[] sortNumber(int[] arr) {
 		
-		int low = 0;
-		int mid = 0;
-		int high = arr.length - 1;
-		int temp;
+		int low = 0; // 1 step
+		int mid = 0; // 1 step
+		int high = arr.length - 1; // 1 step
+		int temp; // 1 step
 		
 		while (mid <= high) {
 			
-			switch (arr[mid]) {
+			switch (arr[mid]) { // n step
 			case 0:
 				temp = arr[low];
 				arr[low] = arr[mid];
@@ -49,8 +49,8 @@ public class Sort {
 				
 			}
 		}
-		return arr;
+		return arr; // 1 step
 		
-		// -> O(1) - Constant time
+		// -> O(n + 5) -> O(n) Constant time
 	}
 }
